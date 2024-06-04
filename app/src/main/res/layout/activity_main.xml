@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B4C5CC"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/title_bar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp">
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Etkinlikler"
+            android:textColor="#673AB7"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/filtreleme"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="Filtrele"
+            android:src="@drawable/baseline_format_list_bulleted_24"
+            app:tint="#673AB7" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:layout_below="@id/title_bar_layout" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_note_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#673AB7"
+        android:contentDescription=" "
+        android:src="@drawable/baseline_add_box_24" />
+
+    <Button
+        android:id="@+id/logOut_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="Çıkış"
+        android:textColor="@color/black"
+        android:backgroundTint="#673AB7"/>
+</RelativeLayout>

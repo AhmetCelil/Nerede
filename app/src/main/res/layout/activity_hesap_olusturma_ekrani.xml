@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".HesapOlusturmaEkrani">
+
+    <ImageView
+        android:id="@+id/sign_up_icon"
+        android:layout_width="157dp"
+        android:layout_height="157dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="32dp"
+        android:src="@drawable/logo_acy" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sign_up_icon"
+        android:id="@+id/hello_text"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Merhaba."
+            android:textStyle="bold"
+            android:textSize="32sp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hadi Başlayalım."
+            android:textStyle="bold"
+            android:textSize="36sp"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/form_layout"
+        android:layout_below="@id/hello_text"
+        android:layout_marginVertical="32dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/create_email_edit_text"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:textSize="20sp"
+            android:background="@drawable/rounded_corner"
+            android:padding="16dp"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/create_password_edit_text"
+            android:inputType="textPassword"
+            android:hint="Şifre Belirle"
+            android:textSize="20sp"
+            android:background="@drawable/rounded_corner"
+            android:padding="16dp"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/create_confirm_password_edit_text"
+            android:inputType="textPassword"
+            android:hint="Tekrar şifre"
+            android:textSize="20sp"
+            android:background="@drawable/rounded_corner"
+            android:padding="16dp"
+            android:layout_marginTop="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:id="@+id/create_account_btn"
+            android:layout_height="64dp"
+            android:text="Hesap Oluştur"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp" />
+
+        <ProgressBar
+            android:layout_width="24dp"
+            android:layout_height="64dp"
+            android:id="@+id/progress_bar"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/form_layout"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zaten Hesabın Var mı? "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/login_text_view_btn"
+            android:text="Giriş"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
